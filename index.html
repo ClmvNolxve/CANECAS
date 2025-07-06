@@ -1,1 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Las Tres Canecas de Basura</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Las Tres Canecas de Basura</h1>
+        <p>Aprende a separar tus residuos correctamente y ayuda al medio ambiente</p>
+    </header>
+    <div class="menu">
+        <a href="#information">Información</a>
+        <a href="#game">Juego</a>
+    </div>
+    <div class="container">
+        <div class="section" id="information">
+            <h2>Introducción</h2>
+            <p>El reciclaje es una de las acciones más importantes que podemos realizar para cuidar nuestro planeta. Separar correctamente los residuos ayuda a reducir la contaminación, ahorrar recursos naturales y disminuir la cantidad de basura que termina en los vertederos.</p>
+            <p>En este sitio, aprenderás sobre las tres canecas de basura y cómo separar correctamente tus residuos. Además, podrás poner a prueba tus conocimientos con un juego interactivo.</p>
+        </div>
+        <div class="section">
+            <h2>Las Tres Canecas</h2>
+            <div style="display: flex; flex-wrap: wrap; justify-content: space-around;">
+                <div class="trash-can">
+                    <h2>Orgánica</h2>
+                    <img src="https://us.123rf.com/450wm/mmalinika/mmalinika2004/mmalinika200400015/145379683-set-of-garbage-cans-with-organic-garbage-recycle-trash-bins-full-of-trash-waste-management.jpg" alt="Caneca Orgánica">
+                    <p>En esta caneca se depositan los residuos orgánicos como restos de comida, cáscaras de frutas, etc.</p>
+                    <div class="more-info">
+                        <h3>Ejemplos</h3>
+                        <p>Cáscaras de huevo, restos de café, hojas, ramas.</p>
+                        <h3>Beneficios</h3>
+                        <p>Los residuos orgánicos pueden ser compostados para crear abono natural.</p>
+                    </div>
+                </div>
+                <div class="trash-can">
+                    <h2>Reciclable</h2>
+                    <img src="https://i.pinimg.com/474x/b5/b6/71/b5b67185c016ac82bee9d4cda260f635.jpg" alt="Caneca Reciclable">
+                    <p>En esta caneca se depositan materiales reciclables como plástico, vidrio, papel y metal.</p>
+                    <div class="more-info">
+                        <h3>Ejemplos</h3>
+                        <p>Botellas de plástico, latas de aluminio, periódicos, cartón.</p>
+                        <h3>Beneficios</h3>
+                        <p>Reciclar estos materiales ayuda a ahorrar energía y reducir la contaminación.</p>
+                    </div>
+                </div>
+                <div class="trash-can">
+                    <h2>No Reciclable</h2>
+                    <img src="https://exitocol.vtexassets.com/arquivos/ids/21717085/caneca-reciclaje-grande-53l-plastica-papelera-de-pedal-negro.jpg?v=638445893464400000" alt="Caneca No Reciclable">
+                    <p>En esta caneca se depositan los residuos que no son reciclables ni orgánicos.</p>
+                    <div class="more-info">
+                        <h3>Ejemplos</h3>
+                        <p>Pañales, colillas de cigarrillos, cerámica, algunos tipos de plástico no reciclable.</p>
+                        <h3>Beneficios</h3>
+                        <p>Separar estos residuos ayuda a evitar la contaminación de materiales reciclables.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section" id="game">
+            <h2>Juego: ¿En qué caneca va?</h2>
+            <p>Arrastra y suelta cada residuo en la caneca correcta.</p>
+            <div class="instructions">
+                <p>Instrucciones: Arrastra cada residuo a la caneca correcta (Orgánica, Reciclable o No Reciclable).</p>
+            </div>
+            <div class="game-info">
+                <div class="score">Puntuación: <span id="score">0</span></div>
+                <div class="timer">Tiempo: <span id="time">60</span>s</div>
+            </div>
+            <div class="game-container">
+                <div class="trash-items" id="trash-items">
+                    <!-- Los residuos se añadirán aquí mediante JavaScript -->
+                </div>
+                <div class="game-cans">
+                    <div class="game-can" id="organic-can" ondrop="drop(event)" ondragover="allowDrop(event)">
+                        <h3>Orgánica</h3>
+                    </div>
+                    <div class="game-can" id="recyclable-can" ondrop="drop(event)" ondragover="allowDrop(event)">
+                        <h3>Reciclable</h3>
+                    </div>
+                    <div class="game-can" id="non-recyclable-can" ondrop="drop(event)" ondragover="allowDrop(event)">
+                        <h3>No Reciclable</h3>
+                    </div>
+                </div>
+                <div class="feedback" id="feedback">
+                    ¡Comienza a jugar!
+                </div>
+                <button id="reset-btn" onclick="resetGame()">Reiniciar Juego</button>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>© 2023 Información sobre reciclaje | <a href="#" style="color: white;">Contacto</a></p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
 
